@@ -14,5 +14,7 @@ const addToLS=id=>{
     const cart=getStoreCart();
     cart.push(id)
     //------------------- save to local storage  --------------
-    saveCartToLS()
+    saveCartToLS(cart)
 }
+
+export {addToLS,getStoreCart}
