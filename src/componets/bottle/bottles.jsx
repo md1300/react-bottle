@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import Bottle from "./bottle";
 import './bottles.css'
 import { addToLS ,getStoreCart} from "../../utility/localStorage";
+import Cart from "../cart/cart";
 
 export default function Bottles(){
    
@@ -43,7 +44,7 @@ export default function Bottles(){
         <div className="bottles">
              <h1 >You can buy any bottle cheaply</h1>
              <h3>bottles quantity : {bottles.length}</h3>
-             <h3>cart : {cart.length}</h3>
+             <Cart cart={cart}></Cart>
              <div >
              {
                bottles.map(bottle=><Bottle
