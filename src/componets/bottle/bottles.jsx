@@ -19,7 +19,16 @@ export default function Bottles(){
         console.log(bottles.length) 
         if(bottles.length>0){
             const storeCart=getStoreCart()
-            console.log(storeCart)
+            // console.log(storeCart)
+             const saveCart=[];
+            for(const id of storeCart ){
+               const bottle= bottles.find(bottle=>bottle.id===id)
+               if(bottle){
+                saveCart.push(bottle)
+               }
+            }
+            console.log(saveCart)
+            setCart(saveCart)
         }                      
         
     },[bottles])
