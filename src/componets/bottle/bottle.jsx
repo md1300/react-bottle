@@ -1,5 +1,5 @@
 import './bottle.css'
-
+import PropTypes from 'prop-types';
 
 export default function Bottle({bottle,handleBottleClick}){
 
@@ -17,4 +17,8 @@ export default function Bottle({bottle,handleBottleClick}){
             <button onClick={()=>handleBottleClick(bottle)}>showData</button>
         </div>
     )
+}
+Bottle.propTypes={
+    bottle:PropTypes.object.isRequired,
+    handleBottleClick: PropTypes.func.isRequired
 }
